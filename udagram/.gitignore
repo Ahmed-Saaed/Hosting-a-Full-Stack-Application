@@ -1,0 +1,10 @@
+node_modules
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+# build file
+/udagram-api/.env
+/udagram-api/www
+/udagram-frontend/www
+/udagram-frontend/archive.7z
