@@ -9,14 +9,16 @@ workflow:
     only: main
 jobs:
   build-windows:
-    executor: windows/default
-      steps:
-        - checkout
-        - run: systeminfo
-workflows:
-  windows-workflow:
-    jobs:
-      - build-windows
+    machine:
+      image: windows-server-2019:stable
+      resource_class: windows.medium
+      shell: powershell.exe -ExecutionPolicy Bypass
+    steps:
+      - checkout
+      - run:
+          command: |
+            systeminfo
+          shell: powershell.exe
   build:
     docker:
       - image: 'cimg/base:stable'
