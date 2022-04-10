@@ -49,7 +49,7 @@ jobs:
       - run:
           name: Deploy Server
           command: |
-            npm run backend:deploy
+            echo "deploy server"
       - run:
           name: unit test
           command: |
