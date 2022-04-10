@@ -6,7 +6,7 @@ jobs:
   build:
     branches:
       only:
-        - main
+        - "main"
     docker:
       - image: 'cimg/base:stable'
     steps:
