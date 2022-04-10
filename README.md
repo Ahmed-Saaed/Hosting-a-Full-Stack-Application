@@ -1,13 +1,53 @@
-# Hosting a Full-Stack Application
+# Udagram
 
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
+This fullstack application was provided to me to practice AWS services on, I didn't use my own application because it will be more challenging to work on someone else's code.
 
----
+![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)
 
-In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
+`all other documentation will be found in [documentation](./documentation/)`
 
-After the initial setup, you will learn to interact with the services you started on aws and will deploy manually the application a first time to it. As you get more familiar with the services and interact with them through a CLI, you will gradually understand all the moving parts.
+## Getting Started
 
-You will then register for a free account on CircleCi and connect your Github account to it. Based on the manual steps used to deploy the app, you will write a config.yml file that will make the process reproducible in CircleCi. You will set up the process to be executed automatically based when code is pushed on the main Github branch.
+1. cd udagram-api && npm install && npm run dev
+1. cd udagram-frontend && npm install && npm run start
+1. relax, as every thing else is automated using circleci pipeline
 
-The project will also include writing documentation and runbooks covering the operations of the deployment process. Those runbooks will serve as a way to communicate with future developers and anybody involved in diagnosing outages of the Full-Stack application.
+### Dependencies
+
+- node.js
+
+- AWS CLI v2
+
+- A RDS database running Postgres.
+
+- A S3 bucket for hosting uploaded pictures.
+
+``
+
+## Diagram
+
+![udagram](./udagram-2.jpg)
+
+## frontend url
+
+[frontend deploy](http://my-udagram-udacity.s3-website-us-east-1.amazonaws.com)
+
+## Built With
+
+- [Angular](https://angular.io/) - Single Page Application Framework
+- [Node](https://nodejs.org) - Javascript Runtime
+- [Express](https://expressjs.com/) - Javascript API Framework
+
+### pipeline
+
+1. install node
+1. setup aws cli
+1. install frontend
+1. install backend
+1. build the frontend
+1. build the backend
+1. deploy the frontend
+
+## License
+
+[License](LICENSE.txt)
