@@ -12,9 +12,6 @@ build-windows:
 workflows:
   windows-workflow:
     jobs:
-      - build-windowsworkflows:
-  windows-workflow:
-    jobs:
       - build-windows
 workflow:
   branches:
