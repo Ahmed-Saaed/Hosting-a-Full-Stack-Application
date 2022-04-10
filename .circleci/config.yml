@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Back-End Build
           command: |
-            npm run backend:build
+            echo "build"
       - run:
           name: Deploy App
           command: |
