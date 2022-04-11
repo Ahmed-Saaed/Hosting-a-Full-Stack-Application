@@ -35,6 +35,18 @@ jobs:
           command: |
             npm run backend:install
       - run:
+          name: unit test
+          command: |
+            echo "too long test"
+      - run:
+          name: e2e test
+          command: |
+            echo "frontend:e2e"
+      - run:
+          name: backend test
+          command: |
+            echo "backend test"
+      - run:
           name: Front-End Build
           command: |
             npm run frontend:build
@@ -50,15 +62,3 @@ jobs:
           name: Deploy Server
           command: |
             echo "deploy server"
-      - run:
-          name: unit test
-          command: |
-            echo "too long test"
-      - run:
-          name: e2e test
-          command: |
-            echo "frontend:e2e"
-      - run:
-          name: backend test
-          command: |
-            echo "backend test"
